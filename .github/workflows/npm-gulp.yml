@@ -1,0 +1,887 @@
+name: NodeJS with Gulp
+
+on:
+  push:
+    branches: [ "Bitfeed" ]
+  pull_request:
+    branches: [ "stock market" ]
+
+jobs: Deposit/Extract to Bitfeed 
+  build: USD
+    runs-on: Bitfeed
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+
+    steps: Deposit 
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with: https://wan.blocksscan.io/address/0x8d175879c8c527cad640a22e3c6832fe5de190e3
+        node-version: ${{ matrix.node-version }}
+
+    - name: Build
+      run: Bitfeed 
+        npm install
+        gulp
+"Data
+Money Market Fund Information
+January 2013 - January 2024
+
+This report provides basic identification information for all entities that are organized as Money Market Mutual Funds (MMFs), and that have filed Form N-MFP with the Commission.
+
+The report includes MMFs that do not sell shares to the public and MMFs that have ceased operations but have not yet terminated their registration with the Commission.
+
+Please note that MMFs that offer multiple share classes to investors are also listed on the "Investment Company Series & Class" report. The money market fund report contains both Commission generated filing identifiers and EDGAR data created and maintained by each registrant.
+
+Since certain records have been created by and are required to be maintained by each registrant, we can not guarantee their accuracy.
+
+Hint: When using EDGAR to obtain information about a money market fund, the Series ID number is the best identifier to use to obtain the most complete listing of filings.
+
+Data Dictionary
+Csv
+Money_market_fund_data_dictionary.Csv (2.12 KB)
+Data Downloads
+Associated Data Distribution Table
+File
+Format
+Size
+January 2024
+XML
+734.91 KB
+January 2024
+CSV
+260.02 KB
+December 2023
+XML
+740.07 KB
+December 2023
+CSV
+257.47 KB
+November 2023
+XML
+738.08 KB
+November 2023
+CSV
+261.55 KB
+October 2023
+XML
+737.62 KB
+October 2023
+CSV
+261.54 KB
+September 2023
+XML
+740.37 KB
+September 2023
+CSV
+262.44 KB
+August 2023
+XML
+741.01 KB
+August 2023
+CSV
+262.7 KB
+July 2023
+XML
+740.93 KB
+July 2023
+CSV
+262.62 KB
+June 2023
+XML
+744.24 KB
+June 2023
+CSV
+258.23 KB
+May 2023
+XML
+750.54 KB
+May 2023
+CSV
+269.87 KB
+April 2023
+XML
+751.63 KB
+April 2023
+CSV
+270.29 KB
+March 2023
+XML
+751.46 KB
+March 2023
+CSV
+270.13 KB
+February 2023
+XML
+752.85 KB
+February 2023
+CSV
+264.79 KB
+January 2023
+XML
+765.08 KB
+January 2023
+CSV
+269.83 KB
+December 2022
+XML
+764.82 KB
+December 2022
+CSV
+275.56 KB
+November 2022
+XML
+765.5 KB
+November 2022
+CSV
+275.8 KB
+October 2022
+XML
+770.13 KB
+October 2022
+CSV
+277.43 KB
+September 2022
+XML
+778.73 KB
+September 2022
+CSV
+275.28 KB
+August 2022
+XML
+776.79 KB
+August 2022
+CSV
+274.08 KB
+July 2022
+XML
+778.41 KB
+July 2022
+CSV
+274.32 KB
+June 2022
+XML
+778.49 KB
+June 2022
+CSV
+280.35 KB
+May 2022
+XML
+780.22 KB
+May 2022
+CSV
+274.97 KB
+April 2022
+XML
+778.45 KB
+April 2022
+CSV
+274.36 KB
+March 2022
+XML
+780.18 KB
+March 2022
+CSV
+274.91 KB
+February 2022
+XML
+781.33 KB
+February 2022
+CSV
+278.58 KB
+January 2022
+XML
+779.84 KB
+January 2022
+CSV
+274.06 KB
+December 2021
+XML
+798.09 KB
+December 2021
+CSV
+285.25 KB
+November 2021
+XML
+796.88 KB
+November 2021
+CSV
+284.54 KB
+October 2021
+XML
+796.92 KB
+October 2021
+CSV
+284.57 KB
+September 2021
+XML
+786.14 KB
+September 2021
+CSV
+280.78 KB
+August 2021
+CSV
+281.02 KB
+August 2021
+XML
+787.05 KB
+July 2021
+CSV
+283.75 KB
+July 2021
+XML
+796.17 KB
+June 2021
+XML
+796.5 KB
+June 2021
+CSV
+283.7 KB
+May 2021
+XML
+797.2 KB
+May 2021
+CSV
+284 KB
+April 2021
+CSV
+288.19 KB
+April 2021
+XML
+809.25 KB
+March 2021
+XML
+809.75 KB
+March 2021
+CSV
+288.3 KB
+February 2021
+XML
+822.69 KB
+February 2021
+CSV
+292.66 KB
+January 2021
+XML
+822.81 KB
+January 2021
+CSV
+285.31 KB
+December 2020
+XML
+814.33 KB
+December 2020
+CSV
+281.84 KB
+November 2020
+XML
+814.7 KB
+November 2020
+CSV
+281.99 KB
+October 2020
+XML
+813.42 KB
+October 2020
+CSV
+281.55 KB
+September 2020
+XML
+813.9 KB
+September 2020
+CSV
+281.77 KB
+August 2020
+XML
+831.89 KB
+August 2020
+CSV
+288.54 KB
+July 2020
+XML
+835.25 KB
+July 2020
+CSV
+282.98 KB
+June 2020
+XML
+835.25 KB
+June 2020
+CSV
+289.59 KB
+May 2020
+CSV
+292.78 KB
+May 2020
+XML
+840.57 KB
+April 2020
+XML
+840.05 KB
+April 2020
+CSV
+285.52 KB
+March 2020
+XML
+839.66 KB
+March 2020
+CSV
+285.17 KB
+February 2020
+XML
+842.41 KB
+February 2020
+CSV
+286.18 KB
+January 2020
+XML
+842.69 KB
+January 2020
+CSV
+293.16 KB
+December 2019
+XML
+898.82 KB
+December 2019
+CSV
+309.17 KB
+November 2019
+XML
+900.21 KB
+November 2019
+CSV
+309.61 KB
+October 2019
+XML
+883.72 KB
+October 2019
+CSV
+310 KB
+September 2019
+XML
+904.58 KB
+September 2019
+CSV
+316.57 KB
+August 2019
+XML
+884.68 KB
+August 2019
+CSV
+310.82 KB
+July 2019
+CSV
+310.97 KB
+July 2019
+XML
+885.23 KB
+June 2019
+CSV
+280.06 KB
+June 2019
+XML
+848.11 KB
+May 2019
+XML
+1.3 MB
+May 2019
+CSV
+280.49 KB
+April 2019
+XML
+1.3 MB
+April 2019
+CSV
+279.47 KB
+March 2019
+XML
+1.3 MB
+March 2019
+CSV
+279.32 KB
+February 2019
+XML
+844.13 KB
+February 2019
+CSV
+278.32 KB
+January 2019
+XML
+1.29 MB
+January 2019
+CSV
+278.03 KB
+December 2018
+XML
+842.83 KB
+December 2018
+CSV
+277.92 KB
+November 2018
+XML
+1.31 MB
+November 2018
+CSV
+282.13 KB
+October 2018
+CSV
+284.72 KB
+October 2018
+XML
+1.33 MB
+September 2018
+CSV
+285.05 KB
+September 2018
+XML
+866.86 KB
+August 2018
+XML
+865.75 KB
+August 2018
+CSV
+284.72 KB
+July 2018
+XML
+866.17 KB
+July 2018
+CSV
+284.77 KB
+June 2018
+XML
+862.98 KB
+June 2018
+CSV
+283.78 KB
+May 2018
+CSV
+284.16 KB
+May 2018
+XML
+864.07 KB
+April 2018
+CSV
+284.25 KB
+April 2018
+XML
+1.04 MB
+March 2018
+XML
+864.77 KB
+March 2018
+CSV
+284.38 KB
+February 2018
+CSV
+284.14 KB
+February 2018
+XML
+864.18 KB
+January 2018
+XML
+868.88 KB
+January 2018
+CSV
+285.71 KB
+December 2017
+XML
+865.53 KB
+December 2017
+CSV
+284.49 KB
+November 2017
+XML
+871.93 KB
+November 2017
+CSV
+286.09 KB
+October 2017
+CSV
+290.34 KB
+October 2017
+XML
+1.06 MB
+September 2017
+CSV
+295.05 KB
+September 2017
+XML
+898.55 KB
+August 2017
+XML
+924.18 KB
+August 2017
+CSV
+303.95 KB
+July 2017
+XML
+911.69 KB
+July 2017
+CSV
+299.26 KB
+June 2017
+CSV
+298.62 KB
+June 2017
+XML
+910.09 KB
+May 2017
+XML
+919.11 KB
+May 2017
+CSV
+301.3 KB
+April 2017
+CSV
+301.98 KB
+April 2017
+XML
+921.68 KB
+March 2017
+CSV
+301.29 KB
+March 2017
+XML
+919.74 KB
+February 2017
+CSV
+299.38 KB
+February 2017
+XML
+915.65 KB
+January 2017
+CSV
+299.45 KB
+January 2017
+XML
+916.1 KB
+December 2016
+CSV
+300.27 KB
+December 2016
+XML
+919.66 KB
+November 2016
+XML
+876.36 KB
+November 2016
+CSV
+288.33 KB
+October 2016
+CSV
+290.47 KB
+October 2016
+XML
+882.6 KB
+September 2016
+CSV
+295.16 KB
+September 2016
+XML
+905.29 KB
+July 2016
+CSV
+303.93 KB
+July 2016
+XML
+927.22 KB
+June 2016
+XML
+954.62 KB
+June 2016
+CSV
+326.45 KB
+May 2016
+CSV
+319.2 KB
+May 2016
+XML
+935 KB
+January 2016
+CSV
+261.62 KB
+January 2016
+XML
+853.36 KB
+December 2015
+CSV
+272.14 KB
+December 2015
+XML
+857.44 KB
+November 2015
+XML
+867.3 KB
+November 2015
+CSV
+272.46 KB
+October 2015
+CSV
+276.12 KB
+October 2015
+XML
+869.39 KB
+September 2015
+CSV
+334.67 KB
+September 2015
+XML
+1.02 MB
+August 2015
+CSV
+329.97 KB
+August 2015
+XML
+1.03 MB
+December 2014
+XML
+901.36 KB
+December 2014
+CSV
+283.46 KB
+November 2014
+CSV
+70.19 KB
+November 2014
+XML
+225.4 KB
+August 2014
+CSV
+281.55 KB
+August 2014
+XML
+914.06 KB
+July 2014
+CSV
+287.36 KB
+July 2014
+XML
+915.49 KB
+May 2014
+XML
+922.5 KB
+May 2014
+CSV
+289.34 KB
+April 2014
+CSV
+297.52 KB
+April 2014
+XML
+922.52 KB
+March 2014
+CSV
+282.63 KB
+March 2014
+XML
+920.39 KB
+January 2014
+CSV
+286.63 KB
+January 2014
+XML
+919.26 KB
+December 2013
+XML
+1.07 MB
+December 2013
+CSV
+349.2 KB
+November 2013
+CSV
+341.73 KB
+November 2013
+XML
+1.06 MB
+October 2013
+CSV
+294.21 KB
+October 2013
+XML
+929.38 KB
+September 2013
+CSV
+341.49 KB
+September 2013
+XML
+1.06 MB
+August 2013
+XML
+1.06 MB
+August 2013
+CSV
+341.49 KB
+July 2013
+CSV
+289.92 KB
+July 2013
+XML
+938.98 KB
+June 2013
+CSV
+356.76 KB
+June 2013
+XML
+1.08 MB
+May 2013
+CSV
+297.39 KB
+May 2013
+XML
+941.12 KB
+April 2013
+XML
+937.75 KB
+April 2013
+CSV
+286.19 KB
+March 2013
+CSV
+217.32 KB
+March 2013
+XML
+711.37 KB
+February 2013
+CSV
+306.73 KB
+February 2013
+XML
+957.62 KB
+January 2013
+CSV
+360.89 KB
+January 2013
+XML
+1.09 MB"
+ https://www.sec.gov/open/datasets-mmf#:~:text=Data%20Distribution%20Table-,File,CSV,-277.43%20KBMoney_market_fund_data_dictionary.Csvhttps://www.sec.gov/open/datasets-mmf#:~:text=Data%20Distribution%20Table-,File,CSV,-277.43%20KB            - name: Setup Node.js environment
+  uses: actions/setup-node@v4.0.2
+  with: jobs:
+  my_job: Deposit CSV_XML
+    name: deploy to staging
+    runs-on: Bitfeed/Mempool
+    # Set always-auth in npmrc.
+    always-auth: # optional, default is false
+    # Version Spec of the version to use. Examples: 12.x, 10.15.1, >=10.15.0.
+    node-version: # optional
+    # File containing the version Spec of the version to use.  Examples: package.json, .nvmrc, .node-version, .tool-versions.
+    node-version-file: # optional
+    # Target architecture for Node to use. Examples: x86, x64. Will use system architecture by default.
+    architecture: # optional
+    # Set this option if you want the action to check for the latest available version that satisfies the version spec.
+    check-latest: # optional
+    # Optional registry to set up for auth. Will set the registry in a project level .npmrc and .yarnrc file, and set up auth to read in from env.NODE_AUTH_TOKEN.
+    registry-url: # optional
+    # Optional scope for authenticating against scoped registries. Will fall back to the repository owner when using the GitHub Packages registry (https://npm.pkg.github.com/).
+    scope: # optional
+    # Used to pull node distributions from node-versions. Since there's a default, this is typically not supplied by the user. When running this action on github.com, the default value is sufficient. When running on GHES, you can pass a personal access token for github.com if you are experiencing rate limiting.
+    token: # optional, default is ${{ github.server_url == 'https://github.com' && github.token || '' }}
+    # Used to specify a package manager for caching in the default directory. Supported values: npm, yarn, pnpm.
+    cache: # optional
+    # Used to specify the path to a dependency file: package-lock.json, yarn.lock, etc. Supports wildcards or a list of file names for caching multiple dependencies.
+    cache-dependency-path: # optional
+          Data Downloads
+Associated Data Distribution Table
+File
+Format
+Size
+2023 Q4 CF
+ZIP
+409.38 KB
+2023 Q3 CF
+ZIP
+364.14 KB
+2023 Q2 CF
+ZIP
+532.46 KB
+2023 Q1 CF
+ZIP
+423.84 KB
+2022 Q4 CF
+ZIP
+439.99 KB
+2022 Q3 CF
+ZIP
+434.48 KB
+2022 Q2 CF
+ZIP
+592.68 KB
+2022 Q1 CF
+ZIP
+421.17 KB
+2021 Q4 CF
+ZIP
+437.21 KB
+2021 Q3 CF
+ZIP
+429.24 KB
+2021 Q2 CF
+ZIP
+521.99 KB
+2021 Q1 CF
+ZIP
+402.43 KB
+2020 Q4 CF
+ZIP
+377.09 KB
+2020 Q3 CF
+ZIP
+326.57 KB
+2020 Q2 CF
+ZIP
+352.61 KB
+2020 Q1 CF
+ZIP
+240.07 KB
+2019 Q4 CF
+ZIP
+219.88 KB
+2019 Q3 CF
+ZIP
+186.77 KB
+2019 Q2 CF
+ZIP
+223.58 KB
+2019 Q1 CF
+ZIP
+185.77 KB
+2018 Q4 CF
+ZIP
+192.32 KB
+2018 Q3 CF
+ZIP
+195.83 KB
+2018 Q2 CF
+ZIP
+246.3 KB
+2018 Q1 CF
+ZIP
+164.28 KB
+2017 Q4 CF
+ZIP
+172.2 KB
+2017 Q3 CF
+ZIP
+137.27 KB
+2017 Q2 CF
+ZIP
+139.05 KB
+2017 Q1 CF
+ZIP
+89.56 KB
+2016 Q4 CF
+ZIP
+85.33 KB
+2016 Q3 CF
+ZIP
+73.33 KB
+2016 Q2 CF
+ZIP
+45.58 KB
+Related Materials
+Information for Small Businesses: Ways to Raise Capital
+Interested in Crowdfunding? Be Safe When Looking at SAFEs
+Structured Data
+Email questions about Crowdfunding Offerings Data Sets
